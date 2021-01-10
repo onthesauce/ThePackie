@@ -1,0 +1,17 @@
+# QOL                                                                                                                                                                                                            
+set -g history-limit 10000                                                                                                                                                                                       
+set -g allow-rename off                                                                                                                                                                                          
+                                                                                                                                                                                                                 
+# Join Windows                                                                                                                                                                                                   
+bind-key j command-prompt -p "Join pane from: " "join-pane -s '%%'"                                                                                                                                              
+bind-key s command-prompt -p "Send pane to: " "join-pane -t '%%'"                                                                                                                                                
+                                                                                                                                                                                                                 
+# Search Mode VI                                                                                                                                                                                                 
+set-window-option -g mode-keys vi                                                                                                                                                                                
+                                                                                                                                                                                                                 
+# tmux Status Bar Color                                                                                                                                                                                          
+set -g status-style bg=black                                                                                                                                                                                     
+set -g status-style fg=red                                                                                                                                                                                       
+                                                                                                                                                                                                                 
+# logging plugin                                                                                                                                                                                                 
+run-shell /opt/tmux-logging/logging.tmux
